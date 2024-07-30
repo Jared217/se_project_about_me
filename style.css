@@ -26,7 +26,7 @@ p {
 
 .header__title {
   font-size: 140px;
-  font-weight:500;
+  font-weight: 500;
   letter-spacing: -5.6px;
   color: #ffe247;
   text-transform: uppercase;
@@ -58,16 +58,16 @@ p {
 }
 
 .content {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 490px);
+  justify-content: center;
   gap: 20px;
   max-width: 1000px;
   margin: 40px auto;
 }
 
 .card {
-  width: 490px;
+  max-width: 490px;
   min-height: 440px;
   background: #ffffff;
 }
@@ -109,4 +109,30 @@ p {
   font-weight: 400;
   color: #efefef;
   text-align: center;
+}
+
+@media screen and (max-width: 540px) {
+  .header__title {
+    font-size: 100px;
+  }
+
+  .content {
+    grid-template-columns: repeat(auto-fit, 300px);
+  }
+
+  .card {
+    max-width: 300px;
+  }
+
+  .card__image {
+    min-height: fit-content;
+  }
+
+  .card__title {
+    font-size: 20px;
+  }
+
+  .card_description {
+    font-size: 14px;
+  }
 }
